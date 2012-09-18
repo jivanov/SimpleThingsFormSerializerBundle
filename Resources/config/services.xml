@@ -47,6 +47,12 @@
             <argument type="service" id="simple_things_form_serializer.serializer.options" />
             <tag name="form.type_extension" alias="form" />
         </service>
+        
+        <service id="simple_things_form_serializer.form.extension.serializer_field_type" class="SimpleThings\FormSerializerBundle\Form\Extension\SerializerTypeExtension">
+            <argument type="service" id="simple_things_form_serializer.serializer.encoder_registry" />
+            <argument type="service" id="simple_things_form_serializer.serializer.options" />
+            <tag name="form.type_extension" alias="field" />
+        </service>
     </services>
 </container>
 
